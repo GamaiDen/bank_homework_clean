@@ -5,7 +5,9 @@
 from typing import List, Dict
 
 
-def filter_by_state(operations: List[Dict], state: str = 'EXECUTED') -> List[Dict]:
+def filter_by_state(
+    operations: List[Dict], state: str = 'EXECUTED'
+) -> List[Dict]:
     """
     Фильтрует операции по статусу.
 
@@ -19,7 +21,9 @@ def filter_by_state(operations: List[Dict], state: str = 'EXECUTED') -> List[Dic
     return [op for op in operations if op.get('state') == state]
 
 
-def sort_by_date(operations: List[Dict], reverse: bool = True) -> List[Dict]:
+def sort_by_date(
+    operations: List[Dict], reverse: bool = True
+) -> List[Dict]:
     """
     Сортирует операции по дате.
 
